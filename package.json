@@ -8,6 +8,7 @@
     "@rails/activestorage": "^6.0.0-alpha",
     "@rails/ujs": "^6.0.0-alpha",
     "@rails/webpacker": "^4.0.7",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "bluebird": "^3.7.0",
     "chart.js": "^2.8.0",
@@ -31,6 +32,25 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "cache-loader": "^4.1.0",
+    "chokidar": "^3.0.2",
+    "compression-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "extra-watch-webpack-plugin": "^1.0.3",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.12.0",
+    "parallel-webpack": "^2.4.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "0.23.1",
+    "terser-webpack-plugin": "^1.4.1",
+    "webpack": "^4.39.2",
+    "webpack-assets-manifest": "^3.1.1",
+    "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "debug": "webpack-dev-server --config config/webpack/debug.js",
+    "development": "webpack-dev-server --config config/webpack/development.js",
+    "production_build": "parallel-webpack --config=config/webpack/production.js"
   }
 }
