@@ -123,6 +123,10 @@
 								  triggerSetIntervalForNextToggleShowA();
 							  }
 
+							  handleChangeOfC_Input(e) {
+								  localStorage.setItem('input_' + new Date(), e.value);
+							  }
+
 							  toggleShowB() {
 								 setInterval(function() {
 									this.showB = true;
@@ -139,6 +143,8 @@
 							  toggleShowC_Input() {
 								  setInterval(function() {
 								    this.showC_Input = true;
+
+									localStorage.setItem('input_' + new Date(), );
 								  }, 2)
 							  }
 							  
@@ -185,7 +191,10 @@
             <small>11 mins ago</small>
           </Toast.Header>
           <Toast.Body>Input ideas: {["a computer program you know", "a windows key combination (just random)", "A strategy for learning to program", "what is -1 * -1?"][Math.random() * 4]</Toast.Body>
-        </Toast>
+		  <Toast.Footer>
+			<input type="text" onChange={this.handleChangeOfC_Input} />
+		  </Toast.Footer>
+		</Toast>
     
 							  
 <ReactBootstrap.Nav variant="tabs" defaultActiveKey="/" onSelect={selectedKey => this.setState({currentContent: selectedKey})}
