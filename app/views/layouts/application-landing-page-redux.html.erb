@@ -153,8 +153,8 @@
 						      return <div>
 
 
-    	<Toast onClose={toggleShowB} show={showA} animation={false}>
-          <Toast.Header>
+    	<ReactBootstrap.Toast onClose={toggleShowB} show={showA} animation={false}>
+          <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
               className="rounded mr-2"
@@ -162,13 +162,13 @@
             />
             <strong className="mr-auto">User engagement system V1</strong>
             <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body>
-		  {["Do something", "press cmd + c, then enter, news.ycombinator.com", "open a new tab in your browser", "get your pen and make notes on a piece of paper", "How is -2 * -2 defined?"][Math.random() * 5]}</Toast.Body>
-        </Toast>
+          </ReactBootstrap.Toast.Header>
+          <ReactBootstrap.Toast.Body>
+		  {["Do something", "press cmd + c, then enter, news.ycombinator.com", "open a new tab in your browser", "get your pen and make notes on a piece of paper", "How is -2 * -2 defined?"][Math.random() * 5]}</ReactBootstrap.Toast.Body>
+        </ReactBootstrap.Toast>
 
-		<Toast onClose={toggleShowC_Input} show={showB} animation={false}>
-          <Toast.Header>
+		<ReactBootstrap.Toast onClose={toggleShowC_Input} show={showB} animation={false}>
+          <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
               className="rounded mr-2"
@@ -176,12 +176,12 @@
             />
             <strong className="mr-auto">User engagement system V1</strong>
             <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body>Think about {["computers", 'poor systems', 'charity', 'water', '-2 * -2 = - ( 0 - 2 - 2) = 4'][Math.random() * 5]}</Toast.Body>
-        </Toast>
+          </ReactBootstrap.Toast.Header>
+          <ReactBootstrap.Toast.Body>Think about {["computers", 'poor systems', 'charity', 'water', '-2 * -2 = - ( 0 - 2 - 2) = 4'][Math.random() * 5]}</ReactBootstrap.Toast.Body>
+        </ReactBootstrap.Toast>
 
-		<Toast onClose={triggerSetIntervalForNextToggleShowA} show={showC_Input} animation={false}>
-          <Toast.Header>
+		<ReactBootstrap.Toast onClose={triggerSetIntervalForNextToggleShowA} show={showC_Input} animation={false}>
+          <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
               className="rounded mr-2"
@@ -189,12 +189,12 @@
             />
             <strong className="mr-auto">User engagement system V1</strong>
             <small>11 mins ago</small>
-          </Toast.Header>
-          <Toast.Body>Input ideas: {["a computer program you know", "a windows key combination (just random)", "A strategy for learning to program", "what is -1 * -1?"][Math.random() * 4]</Toast.Body>
-		  <Toast.Footer>
+          </ReactBootstrap.Toast.Header>
+          <ReactBootstrap.Toast.Body>Input ideas: {["a computer program you know", "a windows key combination (just random)", "A strategy for learning to program", "what is -1 * -1?"][Math.random() * 4]</ReactBootstrap.Toast.Body>
+		  <ReactBootstrap.Toast.Footer>
 			<input type="text" onChange={this.handleChangeOfC_Input} />
-		  </Toast.Footer>
-		</Toast>
+		  </ReactBootstrap.Toast.Footer>
+		</ReactBootstrap.Toast>
     
 							  
 <ReactBootstrap.Nav variant="tabs" defaultActiveKey="/" onSelect={selectedKey => this.setState({currentContent: selectedKey})}
