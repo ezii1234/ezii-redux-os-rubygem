@@ -190,10 +190,10 @@
     },
     "trix": {
       "js": [
-        "/packs/js/trix-9942630289f3d9c54809.js"
+        "/packs/js/trix-3b47c007d4b3b334dd17.js"
       ],
       "js.map": [
-        "/packs/js/trix-9942630289f3d9c54809.js.map"
+        "/packs/js/trix-3b47c007d4b3b334dd17.js.map"
       ]
     }
   },
@@ -219,6 +219,6 @@
   "simulations/water-extremely-simple.js.map": "/packs/js/simulations/water-extremely-simple-b18e32fd8491b46e77b2.js.map",
   "sortable.js": "/packs/js/sortable-3a0273647bbf32f49cfd.js",
   "sortable.js.map": "/packs/js/sortable-3a0273647bbf32f49cfd.js.map",
-  "trix.js": "/packs/js/trix-9942630289f3d9c54809.js",
-  "trix.js.map": "/packs/js/trix-9942630289f3d9c54809.js.map"
+  "trix.js": "/packs/js/trix-3b47c007d4b3b334dd17.js",
+  "trix.js.map": "/packs/js/trix-3b47c007d4b3b334dd17.js.map"
 }
