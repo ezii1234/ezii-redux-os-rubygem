@@ -1,8 +1,8 @@
 {
-  "3d-mindmap-react-jsx-wrapper.js": "/packs/js/3d-mindmap-react-jsx-wrapper-0c70d1a08e26cfc2529a.js",
-  "3d-mindmap-react-jsx-wrapper.js.map": "/packs/js/3d-mindmap-react-jsx-wrapper-0c70d1a08e26cfc2529a.js.map",
-  "3d-mindmap-react.js": "/packs/js/3d-mindmap-react-4aa34d3719591715cf05.js",
-  "3d-mindmap-react.js.map": "/packs/js/3d-mindmap-react-4aa34d3719591715cf05.js.map",
+  "3d-mindmap-react-jsx-wrapper.js": "/packs/js/3d-mindmap-react-jsx-wrapper-e1b0f700052232d80dab.js",
+  "3d-mindmap-react-jsx-wrapper.js.map": "/packs/js/3d-mindmap-react-jsx-wrapper-e1b0f700052232d80dab.js.map",
+  "3d-mindmap-react.js": "/packs/js/3d-mindmap-react-c8c646d10a58785017fb.js",
+  "3d-mindmap-react.js.map": "/packs/js/3d-mindmap-react-c8c646d10a58785017fb.js.map",
   "application.js": "/packs/js/application-218cb2fcc2c5de7c1cb0.js",
   "application.js.map": "/packs/js/application-218cb2fcc2c5de7c1cb0.js.map",
   "copy-and-paste-websocket-update.js": "/packs/js/copy-and-paste-websocket-update-d0724f0f088a05ae5bd3.js",
@@ -22,18 +22,18 @@
   "entrypoints": {
     "3d-mindmap-react-jsx-wrapper": {
       "js": [
-        "/packs/js/3d-mindmap-react-jsx-wrapper-0c70d1a08e26cfc2529a.js"
+        "/packs/js/3d-mindmap-react-jsx-wrapper-e1b0f700052232d80dab.js"
       ],
       "js.map": [
-        "/packs/js/3d-mindmap-react-jsx-wrapper-0c70d1a08e26cfc2529a.js.map"
+        "/packs/js/3d-mindmap-react-jsx-wrapper-e1b0f700052232d80dab.js.map"
       ]
     },
     "3d-mindmap-react": {
       "js": [
-        "/packs/js/3d-mindmap-react-4aa34d3719591715cf05.js"
+        "/packs/js/3d-mindmap-react-c8c646d10a58785017fb.js"
       ],
       "js.map": [
-        "/packs/js/3d-mindmap-react-4aa34d3719591715cf05.js.map"
+        "/packs/js/3d-mindmap-react-c8c646d10a58785017fb.js.map"
       ]
     },
     "application": {

@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 
 import { Canvas, useFrame } from 'react-three-fiber';
+import { EqualStencilFunc } from 'three';
 
 function Thing() {
   const ref = useRef()
@@ -26,3 +27,4 @@ function ThreeDMindMap() {
 
 
 window.ThreeDMindMap = ThreeDMindMap;
+
