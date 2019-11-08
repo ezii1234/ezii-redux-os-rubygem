@@ -116,44 +116,50 @@
 						  class LayoutComponent extends React.Component {
 							  constructor() {
 								  super();
-								  this.state = {currentContent: 'rails-application-layout-yield-content', showA: false, showB: false, showC_Input: false}
+								  this.state = {currentContent: 'rails-application-layout-yield-content', showA: true, showB: false, showC_Input: false}
 							  }
 
 							  componentDidMount() {
-								  triggerSetIntervalForNextToggleShowA();
+								  this.triggerSetIntervalForNextToggleShowA();
+								  						 setTimeout(() => {
+									this.setState({showA: false, showB: true});
+								  }, 2)
 							  }
 
 							  handleChangeOfC_Input(e) {
-								  localStorage.setItem('input_' + new Date(), e.value);
+								  localStorage.setItem('input_' + new Date(), e.value || "123");
 							  }
 
 							  toggleShowB() {
-								 setInterval(function() {
-									this.showB = true;
+								 setTimeout(() => {
+									this.setState({showA: false, showB: true});
 								  }, 2)
 							  }
 
 							  triggerSetIntervalForNextToggleShowA() {
-								  setInterval(function() {
-								  	this.showA = true;
-								  }, 90)
+								 // this.setState({showC_Input: false});
+
+								  setTimeout(() => {
+									// this.setState({showA: true});
+
+								  }, 2)
 
 							  }
 
 							  toggleShowC_Input() {
-								  setInterval(function() {
-								    this.showC_Input = true;
+								  this.setState({showB: false});
+								  setTimeout(() => {
+								//	this.setState({showC_Input: true});
 
-									localStorage.setItem('input_' + new Date(), );
 								  }, 2)
 							  }
 							  
 							  render() {
-							  
+							  alert('test 2');
 						      return <div>
 
 
-    	<ReactBootstrap.Toast onClose={toggleShowB} show={showA} animation={false}>
+    	<ReactBootstrap.Toast onClose={this.toggleShowB} show={this.state.showA} animation={false}>
           <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
@@ -164,10 +170,12 @@
             <small>11 mins ago</small>
           </ReactBootstrap.Toast.Header>
           <ReactBootstrap.Toast.Body>
-		  {["Do something", "press cmd + c, then enter, news.ycombinator.com", "open a new tab in your browser", "get your pen and make notes on a piece of paper", "How is -2 * -2 defined?"][Math.random() * 5]}</ReactBootstrap.Toast.Body>
+		  {["Do something", "press cmd + c, then enter, news.ycombinator.com", "open a new tab in your browser", "get your pen and make notes on a piece of paper", "How is -2 * -2 defined?"][Math.floor(Math.random() * 4)]}
+		  
+		  </ReactBootstrap.Toast.Body>
         </ReactBootstrap.Toast>
 
-		<ReactBootstrap.Toast onClose={toggleShowC_Input} show={showB} animation={false}>
+		<ReactBootstrap.Toast onClose={this.toggleShowC_Input} show={this.state.showB} animation={false}>
           <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
@@ -177,10 +185,10 @@
             <strong className="mr-auto">User engagement system V1</strong>
             <small>11 mins ago</small>
           </ReactBootstrap.Toast.Header>
-          <ReactBootstrap.Toast.Body>Think about {["computers", 'poor systems', 'charity', 'water', '-2 * -2 = - ( 0 - 2 - 2) = 4'][Math.random() * 5]}</ReactBootstrap.Toast.Body>
+          <ReactBootstrap.Toast.Body>Think about {["computers", 'poor systems', 'charity', 'water', '-2 * -2 = - ( 0 - 2 - 2) = 4'][Math.floor(Math.random() * 4)]}</ReactBootstrap.Toast.Body>
         </ReactBootstrap.Toast>
 
-		<ReactBootstrap.Toast onClose={triggerSetIntervalForNextToggleShowA} show={showC_Input} animation={false}>
+		<ReactBootstrap.Toast onClose={this.triggerSetIntervalForNextToggleShowA} show={this.state.showC_Input} animation={false}>
           <ReactBootstrap.Toast.Header>
             <img
               src="holder.js/20x20?text=%20"
@@ -190,15 +198,23 @@
             <strong className="mr-auto">User engagement system V1</strong>
             <small>11 mins ago</small>
           </ReactBootstrap.Toast.Header>
-          <ReactBootstrap.Toast.Body>Input ideas: {["a computer program you know", "a windows key combination (just random)", "A strategy for learning to program", "what is -1 * -1?"][Math.random() * 4]</ReactBootstrap.Toast.Body>
-		  <ReactBootstrap.Toast.Footer>
-			<input type="text" onChange={this.handleChangeOfC_Input} />
-		  </ReactBootstrap.Toast.Footer>
+          <ReactBootstrap.Toast.Body>
+		  
+		  Input ideas: {
+			  ["a computer program you know",
+			  "a windows key combination (just random)",
+			  "A strategy for learning to program",
+			  "what is -1 * -1?"][Math.floor(Math.random() * 3)]}
+			  
+			  
+			  			<input type="text" onChange={this.handleChangeOfC_Input} style={{border: "1px solid black"}}/>
+
+			  </ReactBootstrap.Toast.Body>
+
 		</ReactBootstrap.Toast>
     
 							  
-<ReactBootstrap.Nav variant="tabs" defaultActiveKey="/" onSelect={selectedKey => this.setState({currentContent: selectedKey})}
->
+<ReactBootstrap.Nav variant="tabs" defaultActiveKey="/" onSelect={selectedKey => this.setState({currentContent: selectedKey})}>
   <ReactBootstrap.Nav.Item>
     <ReactBootstrap.Nav.Link href="/">Files</ReactBootstrap.Nav.Link>
   </ReactBootstrap.Nav.Item>
